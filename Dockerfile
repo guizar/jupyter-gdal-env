@@ -42,6 +42,8 @@ RUN conda install --quiet --yes -c conda-forge \
   yaml \
   lxml \
   pydrive  \
+  r-geojsonio \
+  r-rgeos \
   r-lwgeom \
   r-devtools \
   r-tidyverse \
