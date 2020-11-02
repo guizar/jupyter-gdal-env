@@ -56,6 +56,7 @@ RUN conda install --quiet --yes -c conda-forge \
   r-countrycode \
   r-testthat \
   r-rpostgresql \
+  r-emmeans \
   r-ggeffects \
   r-stargazer \
   r-gridExtra \
@@ -66,6 +67,8 @@ RUN conda install --quiet --yes -c conda-forge \
   r-arrangements \
   r-patchwork \
   r-betareg \
+  r-ggally \
+  r-plotly \
   &&\
 
   # Clean
