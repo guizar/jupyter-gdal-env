@@ -69,6 +69,8 @@ RUN conda install --quiet --yes -c conda-forge \
   r-betareg \
   r-ggally \
   r-plotly \
+  r-mapview \
+  r-colorspace \
   &&\
 
   # Clean
