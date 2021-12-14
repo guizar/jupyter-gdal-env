@@ -42,6 +42,7 @@ RUN conda install --quiet --yes -c conda-forge \
   yaml \
   lxml \
   pydrive  \
+  r-gstat \
   r-geojsonio \
   r-rgeos \
   r-lwgeom \
@@ -66,11 +67,12 @@ RUN conda install --quiet --yes -c conda-forge \
   r-glmmtmb \
   r-arrangements \
   r-patchwork \
-  r-betareg \
+#  r-fixest \ # (latest version available via R install)
   r-ggally \
   r-plotly \
   r-mapview \
   r-colorspace \
+  r-pander \
   &&\
 
   # Clean
