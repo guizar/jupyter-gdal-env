@@ -49,6 +49,7 @@ RUN conda install --quiet --yes -c conda-forge \
   r-devtools \
   r-tidyverse \
   r-sf \
+  r-rjson \
   r-kableextra \
   r-lme4 \
   r-car \
@@ -69,6 +70,7 @@ RUN conda install --quiet --yes -c conda-forge \
   r-patchwork \
 #  r-fixest \ # (latest version available via R install)
   r-ggally \
+  r-ggsn \
   r-plotly \
   r-mapview \
   r-colorspace \
