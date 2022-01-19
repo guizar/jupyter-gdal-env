@@ -11,64 +11,55 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 # Switch back to jovyan
 USER $NB_UID
 
-# Use conda to install Python & R packages
-RUN conda install --quiet --yes -c conda-forge \
+# Install mamba
+RUN conda install --quiet --yes -c conda-forge mamba
+
+# Use mamba to install Python & R packages
+RUN mamba install --quiet --yes -c conda-forge \
 	gdal \
   ipykernel \
   ipython \
   r-irkernel \
+  pyproj \
+  postgis \
   proj \
   proj-data \
   python-language-server \
   earthengine-api \
   beautifulsoup4 \
   google-api-python-client \
-  shapely \
-  fiona \
-  pyproj \
-  postgis \
   pandas \
   geopandas \
   psycopg2 \
-  ipyleaflet \
+  folium \
   requests \
-  simplegeneric \
   contextily \
-  ipyleaflet \
-  bokeh \
   palettable \
   pprintpp \
-  requests \
   yaml \
   lxml \
-  pydrive  \
-  r-gstat \
-  r-geojsonio \
   r-rgeos \
   r-lwgeom \
   r-devtools \
   r-tidyverse \
   r-sf \
-  r-rjson \
-  r-kableextra \
-  r-lme4 \
-  r-car \
-  r-nlme \
-  r-broom.mixed \
-  r-countrycode \
-  r-testthat \
   r-rpostgresql \
-  r-emmeans \
-  r-ggeffects \
-  r-stargazer \
-  r-gridExtra \
-  r-hmisc \
+  r-rjson \
+  r-geojsonio \
+  r-kableextra \
+  r-gstat \
+  r-lme4 \
+  r-nlme \
+  r-brms \
+  r-broom.mixed \
   r-tidymodels \
-  r-modelr \
   r-glmmtmb \
+  r-stargazer \
+  r-hmisc \
   r-arrangements \
+  r-countrycode \
+  r-gridExtra \
   r-patchwork \
-#  r-fixest \ # (latest version available via R install)
   r-ggally \
   r-ggsn \
   r-plotly \
@@ -78,7 +69,7 @@ RUN conda install --quiet --yes -c conda-forge \
   &&\
 
   # Clean
-  conda clean --all -y && \
+  conda clean --all -f -y && \
   rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
   rm -rf /home/$NB_USER/.cache/yarn && \
   rm -rf /home/$NB_USER/.node-gyp && \
