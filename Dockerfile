@@ -32,6 +32,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   geopandas \
   psycopg2 \
   folium \
+  leafmap \
   requests \
   contextily \
   palettable \
