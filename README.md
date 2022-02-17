@@ -4,7 +4,7 @@ A Docker-based Jupyter environment with GDAL dependencies :earth_americas: :arti
 
 The environment is based on the [jupyter/minimal-notebook](https://hub.docker.com/r/jupyter/minimal-notebook/tags) image and extends it with the [GDAL](https://gdal.org) binaries. It's meant to play well with the Conda package manager system. In many cases you should be able to install geospatial libraries that require GDAL headers using the `conda install` command.
 
-The image comes with preloaded libraries to analyze and visualize your data, including those from the tidyverse family (for R), as well as pandas, leaflet and a few more for Python. Make sure to check the [docs](https://jupyter-docker-stacks.readthedocs.io/en/latest/#) for further information on customizing the containers.
+The image comes with preloaded libraries to analyse and visualise your data, including those from the tidyverse family (for R), as well as pandas, leaflet and a few more for Python. Make sure to check the [docs](https://jupyter-docker-stacks.readthedocs.io/en/latest/#) for further information on customizing the containers.
 
 **To deploy**
 

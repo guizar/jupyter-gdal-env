@@ -30,6 +30,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   google-api-python-client \
   pandas \
   geopandas \
+  descartes \
   psycopg2 \
   folium \
   leafmap \
