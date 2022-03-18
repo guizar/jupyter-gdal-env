@@ -31,6 +31,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   pandas \
   geopandas \
   descartes \
+  dask \
   psycopg2 \
   folium \
   leafmap \
