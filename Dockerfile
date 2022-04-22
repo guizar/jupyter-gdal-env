@@ -46,11 +46,17 @@ RUN mamba install --quiet --yes -c conda-forge \
   r-devtools \
   r-tidyverse \
   r-sf \
-  r-rpostgresql \
+  r-rpostgres \
+  r-lmtest \
   r-rjson \
   r-geojsonio \
+  r-rnaturalearth \
+  r-rnaturalearthdata \
   r-kableextra \
   r-gstat \
+  r-matchit \
+  r-matching \
+  r-randomforest \
   r-lme4 \
   r-nlme \
   r-brms \
