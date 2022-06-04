@@ -55,6 +55,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   r-kableextra \
   r-gstat \
   r-matchit \
+  r-skimr \
   r-matching \
   r-randomforest \
   r-lme4 \
