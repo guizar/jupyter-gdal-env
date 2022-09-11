@@ -61,12 +61,18 @@ RUN mamba install --quiet --yes -c conda-forge \
   r-lme4 \
   r-nlme \
   r-brms \
+  r-performance \
+  r-see \
+  r-ggeffects \
+  r-ggsignif \
+  r-ggforce \
   r-broom.mixed \
   r-tidymodels \
   r-glmmtmb \
   r-stargazer \
   r-hmisc \
   r-arrangements \
+  r-meta \
   r-countrycode \
   r-gridExtra \
   r-patchwork \
