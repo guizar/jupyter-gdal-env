@@ -17,6 +17,7 @@ RUN conda install --quiet --yes -c conda-forge mamba
 # Use mamba to install Python & R packages
 RUN mamba install --quiet --yes -c conda-forge \
 	gdal \
+  lerc \ <-- Limited Error Raster Compression required by some R packages
   ipykernel \
   ipython \
   r-irkernel \
@@ -29,6 +30,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   beautifulsoup4 \
   google-api-python-client \
   pandas \
+  pandasql \
   geopandas \
   descartes \
   dask \
@@ -45,9 +47,10 @@ RUN mamba install --quiet --yes -c conda-forge \
   r-lwgeom \
   r-devtools \
   r-tidyverse \
+  r-lmtest \
+  r-sandwich \
   r-sf \
   r-rpostgres \
-  r-lmtest \
   r-rjson \
   r-geojsonio \
   r-rnaturalearth \
@@ -56,7 +59,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   r-gstat \
   r-matchit \
   r-skimr \
-  r-matching \
+  r-matchit \
   r-randomforest \
   r-lme4 \
   r-nlme \
@@ -72,7 +75,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   r-stargazer \
   r-hmisc \
   r-arrangements \
-  r-meta \
+  r-metafor \
   r-countrycode \
   r-gridExtra \
   r-patchwork \
@@ -81,6 +84,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   r-plotly \
   r-mapview \
   r-colorspace \
+  r-rcartocolor \
   r-pander \
   &&\
 
