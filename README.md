@@ -19,17 +19,17 @@ docker build . -t jupyter-env
 3. Map the container volume to your local environment (replace `YOUR_DIR` in the snippet below) and `docker run`.
 
 ```shell
-docker run -it -p 8888:8888 --name jupyter-env -v YOUR_DIR:/home/jovyan/work/ jupyter-env:latest start-notebook.sh --allow-root --NotebookApp.token='' --no-browser`
+docker run -it -p 8888:8888 --name jupyter-env -v -e GRANT_SUDO=yes YOUR_DIR:/home/jovyan/work/ jupyter-env:latest start-notebook.sh --allow-root --NotebookApp.token='' --no-browser`
 ```
 
 4. Open a web browser and head over to http://localhost:8888
 
 ### Download hosted image
 
-An alternative to building the image locally is to pull it  from Dockerhub. To donwload the image and initiate the environment run the following:
+An alternative to building the image locally is to pull it  from Dockerhub. To download the image and initiate the environment run the following:
 
 ```shell
-docker run -it -p 8888:8888 --name jupyter-env -v YOUR_DIR:/home/jovyan/work/ guizar/jupyter-env:0.0.1 start-notebook.sh --allow-root --NotebookApp.token='' --no-browser
+docker run -it -p 8888:8888 --name jupyter-env -e GRANT_SUDO=yes -v YOUR_DIR:/home/jovyan/work/ guizar/jupyter-env:0.0.2 start-notebook.sh --allow-root --NotebookApp.token='' --no-browser
 ```
 
 ### GDAL environment variables
@@ -39,4 +39,13 @@ GDAL needs to be manually activated in [https://github.com/conda/conda/issues/40
 ```bash
 conda deactivate
 conda activate base
+```
+
+### Activating EE
+
+With jovyan granted root access the following code should work in jupyter
+
+```python
+import ee
+ee.Authenticate()
 ```
