@@ -31,3 +31,12 @@ An alternative to building the image locally is to pull it  from Dockerhub. To d
 ```shell
 docker run -it -p 8888:8888 --name jupyter-env -v YOUR_DIR:/home/jovyan/work/ guizar/jupyter-env:0.0.1 start-notebook.sh --allow-root --NotebookApp.token='' --no-browser
 ```
+
+### GDAL environment variables
+
+GDAL needs to be manually activated in [https://github.com/conda/conda/issues/4050](GDAL conda) to load environment variables. This can be achieved by deactivating and activating the entire conda environment. Run the following commands in the docker container after initiating the container to properly load GDAL:
+
+```bash
+conda deactivate
+conda activate base
+```

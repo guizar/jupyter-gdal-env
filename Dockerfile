@@ -17,7 +17,7 @@ RUN conda install --quiet --yes -c conda-forge mamba
 # Use mamba to install Python & R packages
 RUN mamba install --quiet --yes -c conda-forge \
 	gdal \
-  lerc \ <-- Limited Error Raster Compression required by some R packages
+  lerc \
   ipykernel \
   ipython \
   r-irkernel \
