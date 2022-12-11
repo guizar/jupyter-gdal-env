@@ -28,6 +28,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   python-language-server \
   earthengine-api \
   google-cloud-sdk \
+  geemap \
   beautifulsoup4 \
   google-api-python-client \
   pandas \
