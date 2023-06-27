@@ -14,6 +14,7 @@ USER $NB_UID
 # Install mamba
 RUN conda install --quiet --yes -c conda-forge mamba
 
+
 # Use mamba to install Python & R packages
 RUN mamba install --quiet --yes -c conda-forge \
 	gdal \
@@ -23,6 +24,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   r-irkernel \
   pyproj \
   postgis \
+  pgcli \
   proj \
   proj-data \
   python-language-server \
@@ -37,6 +39,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   descartes \
   dask \
   psycopg2 \
+  jupytext \
   folium \
   leafmap \
   requests \
@@ -45,6 +48,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   pprintpp \
   yaml \
   lxml \
+  mss \
   r-rgeos \
   r-lwgeom \
   r-devtools \
