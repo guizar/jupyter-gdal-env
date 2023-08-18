@@ -95,7 +95,7 @@ RUN mamba install --quiet --yes -c conda-forge \
   &&\
 
   # Clean
-  conda clean --all -f -y && \
+  mamba clean --all -f -y && \
   rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
   rm -rf /home/$NB_USER/.cache/yarn && \
   rm -rf /home/$NB_USER/.node-gyp && \
